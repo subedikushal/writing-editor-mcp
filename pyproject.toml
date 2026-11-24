@@ -1,0 +1,40 @@
+[project]
+name = "writing-editor-mcp"
+version = "0.2.5"
+description = "A local MCP editor for evidence-based research and technical prose"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "subedikushal" }]
+keywords = ["mcp", "model-context-protocol", "scientific-writing", "editing", "technical-writing"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Text Processing :: Linguistic",
+]
+requires-python = ">=3.11,<3.15"
+dependencies = ["mcp>=1.26,<2"]
+
+[project.urls]
+Homepage = "https://github.com/subedikushal/writing-editor-mcp"
+Repository = "https://github.com/subedikushal/writing-editor-mcp"
+Issues = "https://github.com/subedikushal/writing-editor-mcp/issues"
+
+[project.scripts]
+writing-editor-mcp = "writing_editor_mcp.server:main"
+
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/writing_editor_mcp"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/README.md", "/LICENSE"]

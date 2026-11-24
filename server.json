@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.subedikushal/writing-editor-mcp",
+  "title": "Writing Editor",
+  "description": "Editorial briefs and source-fidelity checks for research papers and technical prose.",
+  "repository": {
+    "url": "https://github.com/subedikushal/writing-editor-mcp",
+    "source": "github"
+  },
+  "version": "0.2.5",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "writing-editor-mcp",
+      "version": "0.2.5",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
